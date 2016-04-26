@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+
+{% block title %}{{ game }}{% endblock %}
+
+{% block page_content %}
+<h2>About...</h2>
+<h3>The Author</h3>
+<p>My name is Aaron Albright, and I'm a journalism student at the Univeristy of Florida. This class assignment ,which was completed Spring 2016, was my final project for my Advanced Web Apps course. During the semester, we learned to use various langagues and tools such as Python and Flask (which this app is built on). This site is the culmination of those skills.
+<h3>The Project</h3>
+<p>This project was designed to compile data from various sources and put them in one, easy-to-read place. In this case, it's the top-100 rated PS4 games on Metacritic.
+<h3>The Data</h3>
+<p>The ratings and games were scraped from <a href="http://www.metacritic.com/game/playstation-4">Metacritic</a>. The length to compleition data was compiled from <a href="http://howlongtobeat.com">HowLongToBeat (HLTB)</a>, which is a site that pulls user-submitted data on game completion. The specifc data used was the combined completion time of the main story of the game (if there is one) and any extra content. For multiplayer-focused titles, the average time spent playing the competitive multiplayer content was used – denoted by a (MP) in the description.
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block title %}{{ game }}{% endblock %}
+
+{% block page_content %}
+<h1 class="game-title">{{ game }}</h1>
+
+<div class="well col-md-8 col-md-offset-2">
+  {% if link %}
+  <iframe class="pull-left default" style="width:120px;height:240px;" scrolling="no" frameborder="0" src="{{ link }}"></iframe>
+  {% else %}
+  <div class="alert alert-info" role="alert"><p><strong>Alert:</strong> This item doesn't have an Amazon listing for the PS4 version! You can find it on the <a class="alert-link" href="https://store.playstation.com">Playstation Store</a>.</p>
+  </div>
+  {% endif %}
+<h2>Metacritic Score: <span class="label label-success">{{ score }}</span></h2>
+
+{% if length == "N/A" %}
+<p class="lead">Because this game is primarly a multiplayer game and has no way of truly being "beaten," the amount of time you get out of it is purely depednent on you.</p>
+{% elif length == "Unknown" %}
+<p class="lead">This game has no length data available.</p>
+{% else %}
+<p class="lead center-block">This game will take you about <b>{{ length }} hours</b> <br> when played at a normal pace.</p>
+{% endif %}
+</div>
+
+
+{% endblock %}

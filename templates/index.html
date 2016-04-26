@@ -1,0 +1,57 @@
+{% extends "bootstrap/base.html" %}
+
+{% block title %}Top-100 PS4 Games{% endblock %}
+
+{% block head %}
+{{ super() }}
+<meta charset="utf-8">
+<meta name=viewport content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{url_for('.static', filename='style.css')}}">
+{% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('home') }}">By Aaron Albright</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+{% block page_content %}
+<div class="col-md-8 col-md-offset-2">
+<div class="page-header">
+<h1>The Top-100 Playstation 4 Games <br><small>(and how long they'll probably take to finish)</small></h1>
+</div>
+<ol class="list-group custom">
+{% for game in games %}
+  <li class="list-group-item"><a href="/{{ game }}">{{ game }}</a></li>
+{% endfor %}
+</div>
+</div>
+
+{% endblock %}
+</div> <!-- close container -->
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright 2016 | Aaron Albright * Data collected from <a href="http://www.metacritic.com/game/playstation-4">Metacritic</a> and <a href="http://howlongtobeat.com">HLTB</a> * Time completions are only approxmiate * Affiliate links used for Amazon products</p>
+      </div>
+    </footer>
+
+{% endblock %}
+</html>
