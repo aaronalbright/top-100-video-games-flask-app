@@ -3,7 +3,7 @@
 ## [Github Repo][1]
 
 ### About me
-My name is Aaron Albright, and I'm a journalism student at the Univeristy of Florida. This class assignment ,which was completed Spring 2016, was my final project for my Advanced Web Apps course. During the semester, we learned to use various langagues and tools such as Python and Flask (which this app is built on). This site is the culmination of those skills.
+My name is Aaron Albright, and I'm a journalism student at the Univeristy of Florida. This class assignment, which was completed Spring 2016, was my final project for my Advanced Web Apps course. During the semester, we learned to use various langagues and tools such as Python and Flask (which this app is built on). This site is the culmination of those skills.
 
 ### About the project
 This project was designed to compile data from various sources and put them in one, easy-to-read place. In this case, it's the top-100 rated PS4 games on Metacritic.
